@@ -143,6 +143,7 @@ const swiper5 = new Swiper('.works-swiper', {
       nextEl: '.works-button-next',
       prevEl: '.works-button-prev',
     },
+    allowTouchMove: false,
     autoHeight: true,
     slidesPerView: 1,
     initialSlide: 0,
