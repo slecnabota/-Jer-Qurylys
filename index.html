@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header wow animate__animated animate__fadeInDown">
+        <div class="container-fluid">
+            <div class="header-wrapper">
+                <img src="img/logo.svg" alt="logo" class="header-logo">
+                <nav class="header-nav">
+                    <a href="#about">О компании</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Услуги</button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-inner">
+                                <a href="#p">Проектирование</a>
+                                <a href="#d">Дизайн интерьеров</a>
+                                <a href="#d-ex">Дизайн экстерьеров</a>
+                                <a href="#l-d">Ландшафтный дизайн</a>
+                                <a href="#y-s">Юридическое сопровождение</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#projects">Проекты</a>
+                    <a href="#reasons">Почему мы</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+                <div class="header-contacts">
+                    <a href="tel:+77075777723" class="header-call">+7 707 577 77 23</a>
+                    <button class="header-btn" onclick="openModal()">
+                        Обратный звонок
+                    </button>
+                </div>
+                <div class="header__menu">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header__mobile">
+                    <nav class="header__mobile-nav">
+                        <a href="#about" onclick="closeLink()">О компании</a>
+                        <button onclick="openThis()" id="btn">Услуги</button>
+                        <div class="header__mobile-content">
+                            <div class="header__mobile-inner">
+                                <a href="#p" onclick="closeLink()">Проектирование</a>
+                                <a href="#d" onclick="closeLink()">Дизайн интерьеров</a>
+                                <a href="#d-ex" onclick="closeLink()">Дизайн экстерьеров</a>
+                                <a href="#l-d" onclick="closeLink()">Ландшафтный дизайн</a>
+                                <a href="#y-s" onclick="closeLink()">Юридическое сопровождение</a>
+                            </div>
+                        </div>
+                        <a href="#projects" onclick="closeLink()">Проекты</a>
+                        <a href="#reasons" onclick="closeLink()">Почему мы</a>
+                        <a href="#reviews" onclick="closeLink()">Отзывы</a>
+                        <a href="#contacts" onclick="closeLink()">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-11 offset-lg-1">
+                        <h1>ПРОЕКТИРОВАНИЕ</h1>
+                    </div>
+                    <div class="row ms-md-2 banner-bottom">
+                        <div class="col-12 col-sm-8 col-lg-8 offset-sm-4 offset-lg-4">
+                            <h1><span>& </span>ДИЗАЙН</h1>
+                            <p class="about-scrollable hid">
+                                Разрабатываем точные проекты домов <br>
+                                и современный дизайн интерьеров
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-wrapper">
+                <div class="banner-image">
+                    <div class="container-fluid">
+                        <div class="banner-container">
+                            <button class="banner-btn" onclick="openModal()">Заказать проект</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container-fluid">
+                <div class="row wow animate__animated animate__fadeInDown">
+                    <div class="col-lg-11 offset-lg-1">
+                        <h1>Создаём архитектурную гармонию </h1>
+                    </div>
+                </div>
+                <div class="row ms-md-2 banner-bottom">
+                    <div class="col-lg-8 offset-lg-4 about-date wow animate__animated animate__fadeInDown">
+                        <h2>с 2015 года</h2>
+                    </div>
+                </div>
+                <div class="row about-wrapper">
+                    <div class="col-lg-3 offset-lg-1 d-none d-lg-block">
+                        <div class="about-item">
+                            <img src="img/a1.png" alt="">
+                            <h2>2256</h2>
+                            <p>
+                                выполненных
+                                проектов
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-7 ps-md-4">
+                        <p class="about-text">
+                            Годы кропотливой работы сделали ТОО «Алматыжеркурылыс» не просто очередной компанией, а
+                            настоящим асом в архитектурной сфере. Наши специалисты постоянно повышают профессиональные
+                            навыки, чем и заслуживают доверие казахстанцев.<br class="d-block d-md-none"><br
+                                class="d-block d-md-none"> Благодаря положительным отзывам о работе,
+                            компания получила звание «Лидер Года 2017». Союз Национальных Бизнес Рейтингов признал
+                            команду ТОО «Алматыжеркурылыс» победителем в конкурсе профессионального признания.
+                        </p>
+                        <div class="about-inner">
+                            <div class="about-item">
+                                <img src="img/a-23.png" alt="" class="d-block d-sm-none">
+                                <img src="img/a2.png" alt="" class="d-none d-sm-block">
+                                <h2>25</h2>
+                                <p>
+                                    квалифицированных<br>
+                                    сотрудников
+                                </p>
+                            </div>
+                            <div class="about-item">
+                                <img src="img/a3.png" alt="">
+                                <h2>1355+</h2>
+                                <p>
+                                    довольных<br>
+                                    клиентов
+                                </p>
+                            </div>
+                            <div class="about-item about-item__hid d-block d-lg-none">
+                                <img src="img/a1.png" alt="">
+                                <h2>2256</h2>
+                                <p>
+                                    выполненных<br>
+                                    проектов
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="p">
+            <div class="container-fluid">
+                <div class="row swiper-slider">
+                    <div class="col-lg-3 offset-lg-1">
+                        <p class="services-title">Наши услуги</p>
+                    </div>
+                    <div class="col-lg-7 ps-lg-4">
+                        <div class="services-top">
+                            <h2 class="wow animate__animated animate__fadeInDown">Проектирование</h2>
+                            <p>
+                                Разработаем цифровой проект дома, готовый к утверждению: от огромного загородного
+                                особняка до небольшой уютной дачи в предгорьях. Мы подготовим эскизный и рабочий
+                                проекты, генеральный план или любой другой проект здания, чтобы ваш дом стал лучшим
+                                местом для жизни.
+                            </p>
+                            <button onclick="openModal()">Заказать проект</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-slider swiper-slider">
+                    <div class="swiper project-swiper">
+                        <div class="swiper-wrapper">
+                            <img src="img/sw1-6.jpg" alt="" class="swiper-slide">
+                            <img src="img/sw1-2.png" alt="" class="swiper-slide">
+                            <img src="img/sw1-3.png" alt="" class="swiper-slide">
+                            <img src="img/sw1-4.jpg" alt="" class="swiper-slide">
+                            <img src="img/sw1-5.jpg" alt="" class="swiper-slide">
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev project-button-prev">
+                        <img src="img/arrow-left.svg" alt="">
+                    </div>
+                    <div class="swiper-button-next project-button-next">
+                        <img src="img/arrow-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="services-design swiper-slider" id="d">
+                    <div class="row">
+                        <div class="col-lg-3 offset-lg-1">
+                        </div>
+                        <div class="col-lg-7 ps-lg-4 offset-lg-0 offset-md-1 swiper-pag">
+                            <div class="swiper-pagination project-pagination"></div>
+                            <div class="services-top">
+                                <h2 class=" wow animate__animated animate__fadeInDown">Дизайн интерьеров</h2>
+                                <p>
+                                    Реализуйте свои мечты об уюте в доме вместе с нами! В руках наших дизайнеров
+                                    обмерный план помещений, концепция оптимального размещения мебели, электрики и
+                                    техники. <br><br>
+                                    Мы гармонизируем эстетику интерьера и учтём в проекте все ваши пожелания.
+                                    Заказать дизайн интерьера
+                                </p>
+                                <button onclick="openModal()">Заказать дизайн интерьера</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-slider">
+                        <div class="swiper design-swiper">
+                            <div class="swiper-wrapper">
+                                <img src="img/sw2-1.png" alt="" class="swiper-slide">
+                                <img src="img/sw2-2.png" alt="" class="swiper-slide">
+                                <img src="img/sw2-3.png" alt="" class="swiper-slide">
+                                <img src="img/sw2-4.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-5.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-6.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-7.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-8.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-9.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-10.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-11.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-12.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-13.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-14.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw2-15.jpg" alt="" class="swiper-slide">
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-prev design-button-prev">
+                            <img src="img/arrow-left.svg" alt="">
+                        </div>
+                        <div class="swiper-button-next design-button-next">
+                            <img src="img/arrow-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="services-design-ex swiper-slider" id="d-ex">
+                    <div class="row">
+                        <div class="col-lg-3 offset-lg-1">
+                        </div>
+                        <div class="col-lg-7 ps-lg-4 offset-lg-0 offset-md-1 swiper-pag">
+                            <div class="swiper-pagination design-pagination"></div>
+                            <div class="services-top">
+                                <h2 class=" wow animate__animated animate__fadeInDown">Дизайн экстерьеров</h2>
+                                <p>
+                                    Тщательно проанализируем ваш запрос и разработаем несколько эстетичных и
+                                    функциональных концепций вашего индивидуального стиля экстерьера. Хорошо
+                                    спроектированный дизайн улучшит визуальное восприятие здания и повысит его стоимость
+                                    и комфортность. <br><br>
+                                    Мы эргономично совместим в одном экстерьере технические новшества и природные
+                                    компоненты.
+                                </p>
+                                <button onclick="openModal()">Заказать дизайн экстерьера</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-slider">
+                        <div class="swiper design-ex-swiper">
+                            <div class="swiper-wrapper">
+                                <img src="img/sw3-1.png" alt="" class="swiper-slide">
+                                <img src="img/sw3-2.png" alt="" class="swiper-slide">
+                                <img src="img/sw3-3.png" alt="" class="swiper-slide">
+                                <img src="img/1.jpg" alt="" class="swiper-slide">
+                                <img src="img/2.jpg" alt="" class="swiper-slide">
+                                <img src="img/3.jpg" alt="" class="swiper-slide">
+                                <img src="img/4.jpg" alt="" class="swiper-slide">
+                                <img src="img/5.jpg" alt="" class="swiper-slide">
+                                <img src="img/6.jpg" alt="" class="swiper-slide">
+                                <img src="img/7.jpg" alt="" class="swiper-slide">
+                                <img src="img/8.jpg" alt="" class="swiper-slide">
+                                <img src="img/9.jpg" alt="" class="swiper-slide">
+                                <img src="img/10.jpg" alt="" class="swiper-slide">
+                                <img src="img/11.jpg" alt="" class="swiper-slide">
+                                <img src="img/12.jpg" alt="" class="swiper-slide">
+                                <img src="img/13.jpg" alt="" class="swiper-slide">
+                                <img src="img/14.jpg" alt="" class="swiper-slide">
+                                <img src="img/15.jpg" alt="" class="swiper-slide">
+                                <img src="img/16.jpg" alt="" class="swiper-slide">
+                                <img src="img/17.jpg" alt="" class="swiper-slide">
+                                <img src="img/18.jpg" alt="" class="swiper-slide">
+                                <img src="img/19.jpg" alt="" class="swiper-slide">
+                                <img src="img/20.jpg" alt="" class="swiper-slide">
+                                <img src="img/21.jpg" alt="" class="swiper-slide">
+                                <img src="img/22.jpg" alt="" class="swiper-slide">
+                                <img src="img/23.jpg" alt="" class="swiper-slide">
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-prev design-ex-button-prev">
+                            <img src="img/arrow-left.svg" alt="">
+                        </div>
+                        <div class="swiper-button-next design-ex-button-next">
+                            <img src="img/arrow-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="services-design-landscape swiper-slider" id="l-d">
+                    <div class="row">
+                        <div class="col-lg-3 offset-lg-1">
+                        </div>
+                        <div class="col-lg-7 ps-lg-4 offset-lg-0 offset-md-1 swiper-pag">
+                            <div class="swiper-pagination design-ex-pagination"></div>
+                            <div class="services-top">
+                                <h2 class=" wow animate__animated animate__fadeInDown">Ландшафтный дизайн</h2>
+                                <p>
+                                    Мы разработаем не просто ландшафтный проект, а создадим на бумаге гармонию между
+                                    красотой и удобством, эстетичностью и практичностью инфраструктуры зданий, парков,
+                                    садов и приусадебных участков. <br><br>
+                                    В ваших руках будет не просто стандартный проект, а целый парк вашей мечты или сад в
+                                    цифровом виде!
+                                </p>
+                                <button onclick="openModal()">Заказать дизайн ландшафта</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-slider">
+                        <div class="swiper design-landscape-swiper">
+                            <div class="swiper-wrapper">
+                                <img src="img/sw4-2.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw4-1.png" alt="" class="swiper-slide">
+                                <img src="img/sw4-3.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw4-4.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw4-5.jpg" alt="" class="swiper-slide">
+                                <img src="img/sw4-6.jpg" alt="" class="swiper-slide">
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-prev design-landscape-button-prev">
+                            <img src="img/arrow-left.svg" alt="">
+                        </div>
+                        <div class="swiper-button-next design-landscape-button-next">
+                            <img src="img/arrow-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row services-lawyer swiper-slider" id="y-s">
+                    <div class="col-lg-4 wow animate__animated animate__fadeInLeft">
+                        <img src="img/lawyer-pic.png" alt="" style="width:100%;">
+                    </div>
+                    <div class="col-lg-7 ps-lg-4 swiper-pag">
+                        <div class="swiper-pagination design-landscape-pagination"></div>
+                        <div class="services-top">
+                            <h2 class=" wow animate__animated animate__fadeIn">Юридическое <br>
+                                сопровождение</h2>
+
+                            <p>
+                                Мы разработаем проект вашего дома от и до, и предоставим полное юридическое
+                                сопровождение. Поможем оформить все виды недвижимости и сопутствующих услуг: дизайн
+                                ландшафта и интерьера, ввод в эксплуатацию, узаконивание, разрешение на строительство,
+                                сейсмологию, топографическую съемку и другие направления.
+                            </p>
+                            <button onclick="openModal()">Получить консультацию</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-works" id="projects">
+                    <div class="swiper works-swiper">
+                        <div class="row">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8">
+                                <div class="swiper-click">
+                                    <div class="swiper-button-prev works-button-prev">
+                                        <img src="img/work-swiper-left.svg" alt="">
+                                    </div>
+                                    <div class="swiper-pagination works-pagination"></div>
+                                    <div class="swiper-button-next works-button-next">
+                                        <img src="img/work-swiper-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide works-pos">
+                                <div class="row works-row">
+                                    <div class="col-lg-3 offset-lg-1">
+                                        <p class="services-title">Наши проекты</p>
+                                    </div>
+                                    <div class="col-lg-7 ps-lg-4">
+                                        <div class="services-top">
+                                            <h2>Дизайн однокомнатной квартиры 53 кв.м.</h2>
+                                            <p>
+                                                г. Алматы, ЖК “Жемчужина” 2022г.
+                                            </p>
+                                            <p>
+                                                Дизайн однокомнатной квартиры в современном стиле, с элементами
+                                                средиземноморского стиля. Площадь квартиры 53.6 кв.м.: комната – 32.7,
+                                                кухня – 9.7 прихожая – 7.5, ванная — 3.7 кв.м. При помощи акцентного
+                                                бирюзового цвета и декоративных элементов мы объединили все помещения.
+                                                Между зоной гостиной и спальни располагается декоративная перегородка из
+                                                брусков, данный элемент повторяется в оформлении стены за обеденным
+                                                столом в кухне, подчёркивая гармонию стиля.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="services-slider swiper-slider">
+                                    <div class="swiper work1-swiper">
+                                        <div class="swiper-wrapper">
+                                            <img src="img/sw5-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw5-1.png" alt="" class="swiper-slide">
+                                            <img src="img/sw5-3.png" alt="" class="swiper-slide">
+                                            <img src="img/sw5-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw5-3.png" alt="" class="swiper-slide">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-prev work1-button-prev">
+                                        <img src="img/arrow-left.svg" alt="">
+                                    </div>
+                                    <div class="swiper-button-next work1-button-next">
+                                        <img src="img/arrow-right.svg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="row swiper-slider">
+                                    <div class="col-lg-4"></div>
+                                    <div class="col-lg-8 works-pag">
+                                        <div class="swiper-pagination work1-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide works-pos">
+                                <div class="row works-row">
+                                    <div class="col-lg-3 offset-lg-1">
+                                        <p class="services-title">Наши проекты</p>
+                                    </div>
+                                    <div class="col-lg-7 ps-lg-4">
+                                        <div class="services-top">
+                                            <h2>Дизайн однокомнатной квартиры 63 кв.м.</h2>
+                                            <p>
+                                                г. Алматы, ЖК “Жемчужина” 2022г.
+                                            </p>
+                                            <p>
+                                                Дизайн однокомнатной квартиры в современном стиле, с элементами
+                                                средиземноморского стиля. Площадь квартиры 53.6 кв.м.: комната – 32.7,
+                                                кухня – 9.7 прихожая – 7.5, ванная — 3.7 кв.м. При помощи акцентного
+                                                бирюзового цвета и декоративных элементов мы объединили все помещения.
+                                                Между зоной гостиной и спальни располагается декоративная перегородка из
+                                                брусков, данный элемент повторяется в оформлении стены за обеденным
+                                                столом в кухне, подчёркивая гармонию стиля.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="services-slider swiper-slider">
+                                    <div class="swiper work2-swiper">
+                                        <div class="swiper-wrapper">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-1.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-prev work2-button-prev">
+                                        <img src="img/arrow-left.svg" alt="">
+                                    </div>
+                                    <div class="swiper-button-next work2-button-next">
+                                        <img src="img/arrow-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="row swiper-slider">
+                                    <div class="col-lg-4"></div>
+                                    <div class="col-lg-8 works-pag">
+                                        <div class="swiper-pagination work2-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide works-pos">
+                                <div class="row works-row">
+                                    <div class="col-lg-3 offset-lg-1">
+                                        <p class="services-title">Наши услуги</p>
+                                    </div>
+                                    <div class="col-lg-7 ps-lg-4">
+                                        <div class="services-top">
+                                            <h2>Проектирование</h2>
+                                            <p>
+                                                г. Алматы, ЖК “Жемчужина” 2022г.
+                                            </p>
+                                            <p>
+                                                Дизайн однокомнатной квартиры в современном стиле, с элементами
+                                                средиземноморского стиля. Площадь квартиры 53.6 кв.м.: комната – 32.7,
+                                                кухня – 9.7 прихожая – 7.5, ванная — 3.7 кв.м. При помощи акцентного
+                                                бирюзового цвета и декоративных элементов мы объединили все помещения.
+                                                Между зоной гостиной и спальни располагается декоративная перегородка из
+                                                брусков, данный элемент повторяется в оформлении стены за обеденным
+                                                столом в кухне, подчёркивая гармонию стиля.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="services-slider swiper-slider">
+                                    <div class="swiper work3-swiper">
+                                        <div class="swiper-wrapper">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-1.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-prev work3-button-prev">
+                                        <img src="img/arrow-left.svg" alt="">
+                                    </div>
+                                    <div class="swiper-button-next work3-button-next">
+                                        <img src="img/arrow-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="row swiper-slider">
+                                    <div class="col-lg-4"></div>
+                                    <div class="col-lg-8 works-pag">
+                                        <div class="swiper-pagination work3-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide works-pos">
+                                <div class="row works-row">
+                                    <div class="col-lg-3 offset-lg-1">
+                                        <p class="services-title">Наши услуги</p>
+                                    </div>
+                                    <div class="col-lg-7 ps-lg-4">
+                                        <div class="services-top">
+                                            <h2>Проектирование</h2>
+                                            <p>
+                                                г. Алматы, ЖК “Жемчужина” 2022г.
+                                            </p>
+                                            <p>
+                                                Дизайн однокомнатной квартиры в современном стиле, с элементами
+                                                средиземноморского стиля. Площадь квартиры 53.6 кв.м.: комната – 32.7,
+                                                кухня – 9.7 прихожая – 7.5, ванная — 3.7 кв.м. При помощи акцентного
+                                                бирюзового цвета и декоративных элементов мы объединили все помещения.
+                                                Между зоной гостиной и спальни располагается декоративная перегородка из
+                                                брусков, данный элемент повторяется в оформлении стены за обеденным
+                                                столом в кухне, подчёркивая гармонию стиля.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="services-slider swiper-slider">
+                                    <div class="swiper work4-swiper">
+                                        <div class="swiper-wrapper">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-1.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-2.png" alt="" class="swiper-slide">
+                                            <img src="img/sw4-3.png" alt="" class="swiper-slide">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-prev work4-button-prev">
+                                        <img src="img/arrow-left.svg" alt="">
+                                    </div>
+                                    <div class="swiper-button-next work4-button-next">
+                                        <img src="img/arrow-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="row swiper-slider">
+                                    <div class="col-lg-4"></div>
+                                    <div class="col-lg-8 works-pag">
+                                        <div class="swiper-pagination work4-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price swiper-slider">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <p class="price-title title wow animate__animated animate__fadeInDown">Узнайте<br> стоимость<br> вашего проекта</p>
+                    </div>
+                    <div class="col-xl-8 ps-xl-4 swiper-pag">
+                        <form class="price-form">
+                            <div class="price-inputs">
+                                <input class="price-text" type="text" placeholder="Ваше имя">
+                                <input class="price-text" type="text" placeholder="Ваш номер телефона">
+                            </div>
+                            <input class="price-text" type="text" placeholder="Кратко опишите Ваш проект">
+                            <input class="price-submit" type="submit" value="Узнать стоимость">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reasons" id="reasons">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <h1 class="reasons-title title wow animate__animated animate__fadeInDown">
+                            Почему мы
+                        </h1>
+                    </div>
+                    <div class="col-xl-8 ps-xl-4">
+                        <div class="reasons-cards">
+                            <div class="reasons-item">
+                                <img src="img/ic1.png" alt="">
+                                <h3>Опытные сотрудники</h3>
+                                <p>
+                                    Компания успешно работает на архитектурном рынке уже 8 лет, а каждый наш сотрудник —
+                                    это высококвалифицированный специалист в сфере проектирования, дизайна и
+                                    юридического сопровождения.
+                                </p>
+                            </div>
+                            <div class="reasons-item">
+                                <img src="img/ic2.png" alt="">
+                                <h3>Скорость проектирования</h3>
+                                <p>
+                                    Каждый пункт нашей проектно-сметной документации грамотно и тщательно
+                                    прорабатывается, что значительно ускоряет прохождение экспертизы.
+                                </p>
+                            </div>
+                            <div class="reasons-item">
+                                <img src="img/ic3.png" alt="">
+                                <h3>Экономия средств и времени</h3>
+                                <p>
+                                    Наши опытные специалисты разработают проект таким образом, что удастся сэкономить до
+                                    20% от суммы, заложенной на материалы. А ещё мы точно знаем, как грамотно и быстро
+                                    узаконить проекты.
+                                </p>
+                            </div>
+                            <div class="reasons-item">
+                                <img src="img/ic4.png" alt="">
+                                <h3>Оформление документов под ключ</h3>
+                                <p>
+                                    Нет необходимости бегать по разным<br> инстанциям! В нашей компании вы легко и<br>
+                                    быстро сдадите документы, оформите<br> заказ и получите уже готовые обратно.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p class="reviews-title title wow animate__animated animate__fadeInDown">
+                            Клиенты о нас
+                        </p>
+                    </div>
+                    <div class="col-lg-7 ps-lg-4 offset-lg-0 offset-lg-1">
+                        <div class="reviews-slider">
+                            <div class="swiper reviews-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="reviews-quote">
+                                            <p>
+                                                Работа ТОО «Алматыжеркурылыс» привела меня в восторг! Особенно хочу
+                                                отметить профессионализм, внимательность к деталям и удивительно
+                                                талантливый взгляд на современные тенденции в дизайне интерьеров.
+                                            </p>
+                                            <span>
+                                                Искакова Айгуль
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="reviews-quote">
+                                            <p>
+                                                Весь процесс команда тесно со мной сотрудничала. Они учли все мои пожелания, красиво оформили мои идеи и сами предоставили варианты дизайна квартиры, чтобы я мог выбрать из них лучшее. Я рекомендую ТОО «Алматыжеркурылыс» — они настоящие эксперты в своей области: знают, как создать красивый и функциональный дизайн.
+                                            </p>
+                                            <span>
+                                                Ахметжан Берик
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="reviews-quote">
+                                            <p>
+                                                Мы с самого начала четко обговорили все пункты дизайна моего дома. Они не только учли все мои пожелания, но и предложили свои варианты. Когда дизайнеры ТОО «Алматыжеркурылыс» закончили работу, я была просто поражена результатом. Я получила гораздо больше, чем просто красивый дизайн интерьера. Теперь в доме комфорт и уют, которые сделали мою жизнь намного приятнее. 
+                                            </p>
+                                            <span>
+                                                Роза Сапиева
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="reviews-quote">
+                                            <p>
+                                                Команда предложила интересные и функциональные варианты проектов моего загородного коттеджа. Более того, мне подобрали варианты, подходящие именно под нашу горную местность, то есть при разработке планов учли особенности почвы, сейсмологии и погодных условий. 
+                                            </p>
+                                            <span>
+                                                Ксения Уварова
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="reviews-quote">
+                                            <p>
+                                                Мне понравилось, что ребята не только предоставили мне проект дома, но и предложили варианты дизайна под мой интерьер. Но я рекомендуя их не только за это. Намного больше я благодарен за полное юридическое сопровождение этого проекта.
+                                            </p>
+                                            <span>
+                                                Алексей Бекшин
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-click">
+                                <div class="swiper-button-prev reviews-button-prev">
+                                    <img src="img/work-swiper-left.svg" alt="">
+                                </div>
+                                <div class="swiper-pagination reviews-pagination"></div>
+                                <div class="swiper-button-next reviews-button-next">
+                                    <img src="img/work-swiper-right.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <img src="img/questions.png" alt="" class="questions-img" width="100%">
+        <section class="questions">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p class="questions-title title wow animate__animated animate__fadeInDown">
+                            Появились <br>
+                            вопросы?
+                        </p>
+                        <span>
+                            Заполните форму, чтобы получить бесплатную консультацию
+                        </span>
+                    </div>
+                    <div class="col-lg-8 ps-lg-4">
+                        <form class="price-form">
+                            <div class="price-inputs">
+                                <input class="price-text" type="text" placeholder="Ваше имя">
+                                <input class="price-text" type="text" placeholder="Ваш номер телефона">
+                            </div>
+                            <input class="price-text" type="text"
+                                placeholder="Кратко опишите Ваш проект">
+                            <input class="price-submit" type="submit" value="Оставить заявку">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="media">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p class="media-title title wow animate__animated animate__fadeInDown">
+                            Следите за <br>
+                            нами в соцсетях
+                        </p>
+                        <div class="media-wrapper">
+                            <a href="">INSTAGRAM</a>
+                            <a href="">FACEBOOK</a>
+                            <a href="">YOUTUBE</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 ps-lg-4">
+                        <div class="media-inner">
+                            <img src="img/m1.png" alt="">
+                            <img src="img/m2.png" alt="">
+                            <img src="img/m3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p class="contacts-title title wow animate__animated animate__fadeInDown">
+                            Контакты
+                        </p>
+                        <span>
+                            <img src="img/location.svg" alt="">
+                            РК, г. Алматы, ул. Толе Би, офис 104.
+                        </span>
+                        <div class="contacts-wrapper">
+                            <a href="tel:+77075777723">
+                                <img src="img/tel.svg" alt="">
+                                +7 707 577 77 23
+                            </a>
+                            <a href="https://wa.me/+77075777723">
+                                <img src="img/wh.svg" alt="">
+                                +7 707 577 77 23
+                            </a>
+                            <a href="https://t.me/+77075777723">
+                                <img src="img/tg.svg" alt="">
+                                +7 707 577 77 23
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 ps-4">
+                        <div class="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-wrapper">
+                <img src="img/footer-logo.svg" alt="" class="footer-logo">
+                <div class="footer-nav">
+                    <a href="#about">О компании</a>
+                    <a href="#reasons">Почему мы</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer-call">
+                    <a href="tel:+77055777723" class="footer-tel">+7 705 577 77 23</a>
+                    <button class="footer-fdb" onclick="openModal()">
+                        Обратный звонок
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="material-symbols-outlined modal-close" onclick="closeModal()">
+                close
+            </span>
+            <div class="modal-inner">
+                <form action="#" class="modal-form">
+                    <div class="modal-inputs">
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="text" placeholder="Ваш номер телефона">
+                    </div>
+                    <input type="text" placeholder="Кратко опишите Ваш проект">
+                    <button class="modal-btn">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="multibutton">
+        <ul class="multibutton__list">
+            <li class="multibutton__item">
+                <a href="tel:+77075777723" class="multibutton__title">Повонить нам</a>
+                <a href="tel:+77075777723" class="multibutton__icon">
+                    <svg height="512" viewBox="0 0 74 74" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m53.5 72h-33a4 4 0 0 1 -4-4v-62a4 4 0 0 1 4-4h33a4 4 0 0 1 4 4v62a4 4 0 0 1 -4 4zm-33-68a2 2 0 0 0 -2 2v62a2 2 0 0 0 2 2h33a2 2 0 0 0 2-2v-62a2 2 0 0 0 -2-2z"></path><path d="m56.5 13h-39a1 1 0 0 1 0-2h39a1 1 0 0 1 0 2z"></path><path d="m56.5 59h-39a1 1 0 0 1 0-2h39a1 1 0 0 1 0 2z"></path><path d="m37 68.188a3.688 3.688 0 1 1 3.688-3.688 3.692 3.692 0 0 1 -3.688 3.688zm0-5.375a1.688 1.688 0 1 0 1.688 1.687 1.689 1.689 0 0 0 -1.688-1.687z"></path><path d="m41 8.75h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2z"></path></svg>
+                </a>
+            </li>
+            <li class="multibutton__item">
+                <a href="https://wa.me/+77075777723" class="multibutton__title">Напишите нам в Whatsapp</a>
+                <a href="https://wa.me/+77075777723" class="multibutton__icon">
+                    <img src="img/wh-white.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="multibutton__button">
+            <img src="img/phone-button.svg" alt="">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/sw1.js"></script>
+    <script src="js/up.js"></script>
+    <script src="js/links.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/wow-init.js"></script>
+</body>
+
+</html>
